@@ -77,8 +77,10 @@ public class Main {
 
 
     public static void helper(Player player1, Player player2) {
+        int roundCount = 0;
         while (!player1.handCard.isEmpty() || !player1.wonCards.isEmpty() || !player2.handCard.isEmpty() || !player2.wonCards.isEmpty()) {
-
+            roundCount++;
+            System.out.println("Round: " + roundCount);
             if (player1.handCard.isEmpty()) {
                 if (player1.wonCards.isEmpty()) {
                     System.out.println("Player 2 wins the game since Player 1 has no more cards!");
@@ -181,20 +183,24 @@ public class Main {
                         }
                     }
 
+                    System.out.println("The battle preperation has BEGUN");
+                    System.out.println();
+
                     System.out.println("Player 1 and Player 2 removed 3 cards FACE DOWN");
+                    System.out.println();
 
                     // If a player runs out of cards while placing War cards, they lose
                     if (player1.handCard.isEmpty()) {
                         System.out.println("Player 2 wins because Player 1 ran out of cards while placing War cards!");
                         System.out.println();
 
-                        System.out.println("Player 1 has no more cards both in his hand " +
-                                player1.handCard.size() + " " + player1.handCard.isEmpty() + " and no cards won " + player1.wonCards.size() + " " +
+                        System.out.println("Player 1 has no more cards both in his hand: " +
+                                player1.handCard.size() + ": " + player1.handCard.isEmpty() + " and no cards won: " + player1.wonCards.size() + ": " +
                                 player1.wonCards.isEmpty());
                         System.out.println();
 
                         System.out.println("Player 2's hand " +
-                                player2.handCard.size() + " " + player2.handCard.isEmpty() + " and cards won " + player2.wonCards.size() +" " +
+                                player2.handCard.size() + ": " + player2.handCard.isEmpty() + " and cards won: " + player2.wonCards.size() + ": " +
                                 player2.wonCards.isEmpty());
                         return;
                     }
@@ -202,13 +208,13 @@ public class Main {
                         System.out.println("Player 1 wins because Player 2 ran out of cards while placing War cards!");
                         System.out.println();
 
-                        System.out.println("Player 2 has no more cards both in his hand " +
-                                player2.handCard.size() + " " + player2.handCard.isEmpty() + " and no cards won " + player2.wonCards.size() + " " +
+                        System.out.println("Player 2 has no more cards both in his hand: " +
+                                player2.handCard.size() + ": " + player2.handCard.isEmpty() + " and no cards won: " + player2.wonCards.size() + ": " +
                                 player2.wonCards.isEmpty());
                         System.out.println();
 
-                        System.out.println("Player 1's hand " +
-                                player1.handCard.size() + " " + player1.handCard.isEmpty() + " and cards won " + player1.wonCards.size() + " " +
+                        System.out.println("Player 1's hand: " +
+                                player1.handCard.size() + ": " + player1.handCard.isEmpty() + " and cards won: " + player1.wonCards.size() + ": " +
                                 player1.wonCards.isEmpty());
 
                         return;
@@ -225,16 +231,20 @@ public class Main {
 
                     if (finalWarCardP1.getValue() > finalWarCardP2.getValue()) {
                         System.out.println();
-                        System.out.println("🔥 Player 1 wins the war!");
+                        System.out.println("🔥 Player 1 wins the war! 🔥");
+                        System.out.println();
+
                         player1.wonCards.addAll(warPile);
                         break;
                     } else if (finalWarCardP1.getValue() < finalWarCardP2.getValue()) {
                         System.out.println();
-                        System.out.println("🔥 Player 2 wins the war!");
+                        System.out.println("🔥 Player 2 wins the war! 🔥");
+                        System.out.println();
+
                         player2.wonCards.addAll(warPile);
                         break;
                     } else {
-                        System.out.println("⚔️ Another WAR! The battle continues...");
+                        System.out.println("⚔️ Another WAR! The battle continues...⚔️");
 
                     }
 
