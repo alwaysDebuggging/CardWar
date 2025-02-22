@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Deck {
     private final List<Card> cards = new ArrayList<>();
-    private final String [] cranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"};
+    private final String [] cranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
     private final String [] suits = {"Hearts", "Diamonds", "Spades", "Clubs"};
     private final int [] cvalue = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
