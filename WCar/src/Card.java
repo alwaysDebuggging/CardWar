@@ -1,22 +1,21 @@
 public class Card {
-    protected int valuee;
-    public enum Suits {Hearts, Spade, Diamond, Clubs};
-    private Suits suit;
+    protected int value;
+    private final String rank;
+    private final String suit;
 
 
-    public Card(int valuee, Suits suit){
-        this.valuee = valuee;
+    public Card(int value, String rank, String suit) {
+        this.value = value;
         this.suit = suit;
+        this.rank = rank;
     }
-
 
     public int getValue() {
-        return valuee;
+        return value;
     }
 
-
-    public Suits getSuit() {
-        return suit;
+    @Override
+    public String toString() {
+        return rank + " of " + suit;
     }
-
 }

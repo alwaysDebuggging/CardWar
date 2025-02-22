@@ -2,15 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-    Card[] handC = new Card[0];
-    
+    List<Card> handCard = new ArrayList<>();
+    List<Card> wonCards = new ArrayList<>();
 
 
-    public Player (Card[] handC ){
-        this.handC = handC;
-        for (int i = 0; i < handC.length; i++) {
-            
-        }
+    public Player (){
+
 
     }
 
