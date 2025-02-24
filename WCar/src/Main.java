@@ -5,16 +5,39 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Implement that more people can play and add more in the deck.
+        /*
+
+        System.out.println("Please enter how many are playing");
+        int nPlayers = numberOfPlayers.nextInt();
+
+        Player[] playerArr = new Player[nPlayers];
+
+
+        for (int i = 0; i < nPlayers ; i++) {
+            System.out.println((i + 1) + " player, enter your name:");
+            String nm = playername.nextLine();
+
+            playerArr[i] = new Player(nm);
+        }
+
+        for (int i = 0; i < playerArr.length; i++) {
+            System.out.println(playerArr[i].name);
+        }
+         */
+
         Scanner scanner = new Scanner(System.in);
-        Scanner scanner1 = new Scanner(System.in);
-        Scanner scanner2 = new Scanner(System.in);
+        Scanner playerOne = new Scanner(System.in);
+        Scanner playerTwo = new Scanner(System.in);
 
-        System.out.println("Please enter your name Player 1");
+        System.out.println("Please enter your name Player 1:");
 
-        Player player1 = new Player(scanner1.next());
+        Player player1 = new Player(playerOne.next());
 
-        System.out.println("Please enter your name Player 2");
-        Player player2 = new Player(scanner2.next());
+        System.out.println("Please enter your name Player 2:");
+        Player player2 = new Player(playerTwo.next());
+
+        //The card deck
         Deck deck = new Deck();
 
         while (deck.getSize() > 0) {
